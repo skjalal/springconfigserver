@@ -1,16 +1,17 @@
 spring:
-  application:
-    name: springconfigserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/skjalal/project-config-properties.git
+          search-paths:
+            - springconfigclient
+    bus:
+      enabled: true
   rabbitmq:
     host: 127.0.0.1
     port: 5672
     username: guest
     password: guest
-management:
-  endpoint:
-    bus-env:
-      enabled: true
-    bus-refresh:
-      enabled: true
-  security:
-    enabled: false
+server:
+  port: 8888

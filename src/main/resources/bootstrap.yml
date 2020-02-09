@@ -1,14 +1,3 @@
 spring:
-  cloud:
-    bus:
-      enabled: true
-      env:
-        enabled: true
-      trace:
-        enabled: true
-    config:
-      server:
-        git:
-          uri: https://github.com/skjalal/springconfigserver.git
-          search-paths:
-            - springconfigclient
+  application:
+    name: springconfigserver
